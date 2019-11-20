@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'rescoped'
+require 'pry'
+require 'irb'
+
+# load models and schema
+require File.expand_path('../spec/support/models.rb', __dir__)
+database = File.join('../spec/rescoped.sqlite3')
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: database)
+load File.expand_path('../spec/support/schema.rb', __dir__)
+
+Pry.start
+IRB.start(__FILE__)
