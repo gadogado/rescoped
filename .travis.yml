@@ -1,3 +1,5 @@
 language: ruby
 rvm: 2.5.5
-script: bundle exec rspec
+script: 
+  - rake
+  - bundle exec rubocop
