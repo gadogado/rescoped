@@ -35,7 +35,7 @@ Rescoped let's you keep an existing scope but **without** the same relations str
   Photo.left_outer_joins(:users, :likes, :region).remove_left_outer_joins(:users, :likes)
   ```
 
-  2. Remove a single relations from the `:joins`
+  2. Remove a single relation from the `:joins`
   ```ruby
   Photo.joins(:users, :likes).remove_joins(:users)
   ```
@@ -43,7 +43,7 @@ Rescoped let's you keep an existing scope but **without** the same relations str
   3. The rescoped utilities can be used anywhere in the chain:
 
   ```ruby
-  Photo.includes(:users).left_joins(:regions).viewable.recent.remove_includes(:users)
+  Photo.includes(:users, :likes).left_joins(:regions).viewable.recent.remove_includes(:users)
   ```
 
 ## Installation
