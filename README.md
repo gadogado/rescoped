@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/gadogado/rescoped.svg?branch=master)](https://travis-ci.org/gadogado/rescoped)
 
-Rescoped allows you to remove specific relations from an activerecord `:joins` or `:includes` with some new utilities, `remove_includes`, `remove_joins`, and `remove_left_outer_joins`
+Rescoped allows you to remove specific relations from an activerecord `:joins` or `:includes` with some new utilities: `remove_includes`, `remove_joins`, and `remove_left_outer_joins`
 
 ### Usage
 

@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version       = Rescoped::VERSION
   spec.authors       = ['Geoff Ereth']
   spec.email         = ['github@geoffereth.com']
-  spec.summary       = 'Remove includes or joins from an activerecord scope'
+  spec.summary       = 'Remove specific relations from an activerecord joins or includes'
   spec.homepage      = 'https://github.com/gadogado/rescoped'
   spec.license       = 'MIT'
   spec.metadata['homepage_uri'] = spec.homepage
