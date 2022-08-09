@@ -5,6 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rescoped/version'
 
 Gem::Specification.new do |spec|
+  spec.required_ruby_version = '>= 3.0'
   spec.name          = 'rescoped'
   spec.version       = Rescoped::VERSION
   spec.authors       = ['Geoff Ereth']
@@ -21,13 +22,13 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'activerecord', '>= 4.0.0'
-  spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'factory_bot'
-  spec.add_development_dependency 'faker'
-  spec.add_development_dependency 'pry'
+  spec.add_runtime_dependency 'activerecord', '~> 7.0', '>= 7.0.3.1'
+  spec.add_development_dependency 'bundler', '~> 2.3'
+  spec.add_development_dependency 'factory_bot', '>= 6.2'
+  spec.add_development_dependency 'faker', '>= 2.22.0'
+  spec.add_development_dependency 'pry', '>= 0.14.1'
   spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.2'
-  spec.add_development_dependency 'rubocop', '>= 0.76.0'
-  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'rspec', '~> 3.11'
+  spec.add_development_dependency 'rubocop', '>= 1.34.1'
+  spec.add_development_dependency 'sqlite3', '>= 1.4.4'
 end
