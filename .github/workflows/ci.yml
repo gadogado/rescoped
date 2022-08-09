@@ -1,24 +1,16 @@
-name: CI
-
-on: [push]
-
+name: ci
+on: [push, pull_request]
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        bundler-cache: true
     - name: Setup system deps
-      run: |
-        sudo apt-get install libsqlite3-dev
-        gem install bundler
+      run: sudo apt-get install libsqlite3-dev
+    - name: Cops
+      run: bundle exec rubocop
     - name: Test
-      run: |
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
-        bundle exec rubocop
+      run: bundle exec rake
